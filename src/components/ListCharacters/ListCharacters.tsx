@@ -6,7 +6,7 @@ import {
   StyleTypography,
 } from "./styles";
 
-const CharactersDetails = () => {
+const ListCharacters = () => {
     return (
       <StyleBox>
         <StylePaper elevation={3}>
@@ -21,4 +21,4 @@ const CharactersDetails = () => {
     );
 }
 
-export default CharactersDetails
+export default ListCharacters
