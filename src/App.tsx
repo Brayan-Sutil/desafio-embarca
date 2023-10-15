@@ -1,13 +1,9 @@
-import ListCharacters from "./components/ListCharacters/ListCharacters";
-import {  Box  } from "@mui/material";
+import Wrapper from "./components/Wrapper/Wrapper";
 
 function App() {
-
   return (
-    <Box padding={2}>
-      <ListCharacters />
-    </Box>
+    <Wrapper />
   );
 }
 
-export default App
+export default App;
