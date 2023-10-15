@@ -1,11 +1,13 @@
+import ListCharacters from "./components/ListCharacters/ListCharacters";
+import {  Box  } from "@mui/material";
 
 function App() {
 
   return (
-    <>
-      <h1>Hello Word!!</h1>
-    </>
-  )
+    <Box padding={2}>
+      <ListCharacters />
+    </Box>
+  );
 }
 
 export default App
