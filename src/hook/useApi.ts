@@ -7,8 +7,10 @@ export const useApi = () => {
     const [ pages, setPages ] = useState<number>();
     const [ characters, setCharacters ] = useState<ICharacterData[]>([]);
     
-    const listCharacter = async () => {
-        const response = await fetch(baseUrl + "people/");
+    const listCharacter = async (page: number = 1) => {
+        const url = `${baseUrl}people/?page=${page}`;
+        setCharacters([])
+        const response = await fetch(url);
         const data = await response.json();
         if( data.count && !pages ){
             const pagesNumber = Math.ceil(data.count / data.results.length);
