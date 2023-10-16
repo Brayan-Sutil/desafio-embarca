@@ -1,8 +1,11 @@
 import Wrapper from "./components/Wrapper/Wrapper";
+import { CharacterProvider } from "./context/CharacterProvider";
 
 function App() {
   return (
-    <Wrapper />
+    <CharacterProvider>
+      <Wrapper />
+    </CharacterProvider>
   );
 }
 
