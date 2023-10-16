@@ -1,5 +1,5 @@
 import { Pagination } from "@mui/material";
-import Characters from "../Characters/Characters";
+import Character from "../Character/Character";
 import {
   StyleBox,
   StyleContainer,
@@ -7,10 +7,17 @@ import {
   StyleTypography,
   StyleStack
 } from "./styles";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useApi } from "../../hook/useApi";
 
 const ListCharacters = () => {
-  const [page, setPage] = useState(1);
+  const { characters, pages, listCharacter } = useApi();
+  const [ page, setPage ] = useState(1);
+
+  useEffect(() => {
+    listCharacter()
+  },[]);
+
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };
@@ -19,10 +26,12 @@ const ListCharacters = () => {
         <StylePaper elevation={3}>
           <StyleContainer>
             <StyleTypography variant="h1">Star Wars Characters</StyleTypography>
-            <Characters />
+            {characters.map((character) => (
+              <Character character={character} />
+            ))}
           </StyleContainer>
           <StyleStack spacing={2}>
-            <Pagination count={15} page={page} onChange={handleChange} />
+            <Pagination count={pages} page={page} onChange={handleChange} />
           </StyleStack>
         </StylePaper>
       </StyleBox>
