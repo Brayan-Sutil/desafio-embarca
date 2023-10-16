@@ -1,14 +1,20 @@
-import { Container, Paper, Box, Typography, Stack } from "@mui/material";
+import {
+  Container,
+  Paper,
+  Box,
+  Typography,
+  Stack,
+} from "@mui/material";
 import styled from "styled-components";
 
-export const StyleContainer = styled(Container)`
+export const StyledContainer = styled(Container)`
     display: flex;
     justify-content: center;
     padding: 32px !important;
     flex-direction: column;
 `
 
-export const StylePaper = styled(Paper)`
+export const StyledPaper = styled(Paper)`
     min-height: 600px;
     height: 100%;
     display: flex;
@@ -17,16 +23,18 @@ export const StylePaper = styled(Paper)`
     justify-content: space-between;
 `
 
-export const StyleBox = styled(Box)`
+export const StyledBox = styled(Box)`
   width: 39.2%;
 `;
 
-export const StyleTypography = styled(Typography)`
+export const StyledTypography = styled(Typography)`
     text-align: center;
     margin-bottom: 32px !important;
     font-size: 24px !important;
 `
 
-export const StyleStack = styled(Stack)`
+export const StyledStack = styled(Stack)`
     margin-bottom: 32px;
+    width: 100%;
+    padding: 0 32px;
 `
