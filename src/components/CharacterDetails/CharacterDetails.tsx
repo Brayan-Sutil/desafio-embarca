@@ -11,7 +11,7 @@ const CharacterDetails = ({ character }: IProps) => {
     <StyledBox>
       <StyledPaper elevation={3}>
         <StyledContainer>
-          <Typography variant="h3">{character.name}</Typography>
+          <Typography variant="h3" fontSize={24}>{character.name}</Typography>
           <ul>
             {Object.entries(character).map(([dataKey, dataValue]) => {
               return (
