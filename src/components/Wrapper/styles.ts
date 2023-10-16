@@ -6,5 +6,5 @@ export const StyledBox = styled(Box)`
     padding:16px ;
     flex-direction:row ;
     display:flex;
-    height: calc(100vh - 32px)
+    min-height: calc(100vh - 32px)
 `
